@@ -1,0 +1,83 @@
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+label {
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.options__content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input {
+    width: 60px;
+    height: 32px;
+    text-align: center;
+    border-radius: 30px;
+    border: solid 1px black;
+    font-size: 16px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+input[type='checkbox'] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.label-toggle {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 60px;
+    height: 32px;
+    background: #dae6ec;
+    display: block;
+    border-radius: 20px;
+    position: relative;
+}
+
+.label-toggle:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.checkbox-btn:checked + .label-toggle {
+    background: linear-gradient(90deg, #4158d0, #c850c0);
+}
+
+.checkbox-btn:checked + .label-toggle:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+.label-toggle:active:after {
+    width: 24px;
+}

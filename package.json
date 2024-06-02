@@ -1,0 +1,29 @@
+{
+    "name": "progressbar",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "homepage": "https://a-koloshva.github.io/progressbar",
+    "scripts": {
+        "build": "webpack",
+        "start": "webpack-dev-server --open",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "copy-webpack-plugin": "^11.0.0",
+        "css-loader": "^6.7.3",
+        "html-webpack-plugin": "^5.5.1",
+        "webpack": "^5.82.1",
+        "webpack-cli": "^5.1.1"
+    },
+    "dependencies": {
+        "gh-pages": "^6.1.1",
+        "normalize.css": "^8.0.1",
+        "style-loader": "^3.3.2",
+        "webpack-dev-server": "^4.15.0"
+    }
+}
